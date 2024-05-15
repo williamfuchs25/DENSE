@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>About</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="about">Population Density</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="macro">The US</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdownMenuLink"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              State
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              {% for state in states %}
+              <a class="dropdown-item" href="micro?state={{state}}"
+                >{{state}}</a
+              >
+              {% endfor %}
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <h1>About</h1>
+    <div class="accordion" id="accordionPanelsStayOpenExample">
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button
+            class="accordion-button"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#panelsStayOpen-collapseOne"
+            aria-expanded="true"
+            aria-controls="panelsStayOpen-collapseOne"
+          >
+            Context
+          </button>
+        </h2>
+        <div
+          id="panelsStayOpen-collapseOne"
+          class="accordion-collapse collapse show"
+        >
+          <div class="accordion-body">
+            The reason why I chose to research the density of the US population is because I am fascinated
+            by the fact all of our states are so different in so many ways, including how densely compact their
+            State is. We all live in New York City, and while we know that this city is incredibly dense with people,
+            the rest of the state is much more spread out with land and is filled with more rural areas and communities.
+            
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button
+            class="accordion-button collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#panelsStayOpen-collapseTwo"
+            aria-expanded="false"
+            aria-controls="panelsStayOpen-collapseTwo"
+          >
+            Data Pipeline
+          </button>
+        </h2>
+        <div
+          id="panelsStayOpen-collapseTwo"
+          class="accordion-collapse collapse"
+        >
+          <div class="accordion-body">
+            <p>
+              1. I retrieved data from
+              <a href="https://en.wikipedia.org/wiki/List_of_states_and_territories_of_the_United_States_by_population_density"
+                >US population density Wikipedia page</a
+              >.
+              I imported the csv and json modules to read CSV files (data.csv) and to write JSON files.</li>
+              <li>2. Then the file paths were defined for the input CSV file (csv_file_path) and the output JSON file (json_file_path).</li>
+              <li>3. I initialized an empty dictionary named data_dict to hold the data from the CSV file.</li>
+              <li>4. I then opened the CSV file in read mode.</li>
+              <li>5. The CSV file is read using the readlines() function to read all lines of the CSV file into a list.</li>
+              <li>6. I processed each line in the CSV file, except the header line, and each line is placed in a loop. Each line is stripped of leading or trailing whitespace and split into geography and people_mile for server.py</li>
+              <li>7. I then wrote the dictionary to a JSON file using the json.dump() function to create my <a href="data/server.py">server.py</a> and <a href="">jsonparser.py</a>.</li>
+
+              <li>8. I used a python script to parse the data into python
+              dictionaries.<li>
+            </p>
+            <p>
+              
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button
+            class="accordion-button collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#panelsStayOpen-collapseThree"
+            aria-expanded="false"
+            aria-controls="panelsStayOpen-collapseThree"
+          >
+            Prototypes
+          </button>
+        </h2>
+        <div
+          id="panelsStayOpen-collapseThree"
+          class="accordion-collapse collapse"
+        >
+          <div class="accordion-body">
+            <img
+              image1_location='.jpg' 
+              src="./america.jpg"
+              alt="prototype"
+              width="75%"
+              height="70%">
+              <img
+              image1_location='.jpg'
+              src="./texas.jpg"
+              alt="prototype"
+              width="75%"
+              height="70%"
+            />
+            
+            <h3>Feedback</h3>
+            <p>
+              For my initial feedback, I was told to include more color, inprove labeling,
+              increase clarity, change the background color, and produce a brief
+              written description of data representations. 
+              When I initially received feedback from the form I was doing a different topic so the feedback I got on that day does not correlate to the current state of my project. 
+              But I have gotten verbal feedback recently. One tip a friend gave me was to make the states have more of a difference in color compared to states with different densities. 
+              Before this piece of advice my states did not have as much variation in their shade of blue as they do now. So now, it is more obvious which states have higher densities than others.
+
+              
+            
+              
+                <h3>Takeaways:</h3>
+                <h6>
+                I thought that New York was going to be the most dense state because of how many people are in it and because New York City is the densest city in the US. But as I researched I was was surprised to see that New Jersey, our little brother, is the most dense state in the US.  I also noticed how, generally, costal states are more dense then states that are in central America.
+                </h6>
+                <h6></h6>
+                <h6></h6>
+              </div>
+            </div>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- <div id="line_graph_all">
+    {% include 'line_graph.svg' %}
+  </div> -->
+
+    <div></div>
+
+    <footer>
+      All data from
+      <a href="https://en.wikipedia.org/wiki/List_of_states_and_territories_of_the_United_States_by_population_density"
+        >US population density Wikipeida page</a
+      >.
+    </footer>
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
